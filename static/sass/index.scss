@@ -1,0 +1,38 @@
+*{
+    box-sizing: border-box;
+}
+nav{
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    background-color: #f6f7f9;
+    a{
+        position: relative;
+        display: table-cell;
+        line-height: 44px;
+        text-align: center;
+        border-bottom: #d6d6d6 solid 1px;
+        i{
+            position: absolute;
+            top: 12px;
+            right: 16px;
+        }
+        &.active{
+            border-bottom: $theme-color solid 2px;
+        }
+    }
+}
+.badge{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ff1500;
+}
+.global-list{
+    margin-bottom: 10px;
+    background-color: #fff;
+    &.item{
+        border-bottom: #eee solid 1px;
+    }
+}

@@ -1,0 +1,83 @@
+// variable
+$theme-color: #fd9500 !default;
+
+// type
+body {
+    line-height: 1.5em;
+    font-family: Helvetica,arial,sans-serif;
+    font-size: 16px;
+    color: #666;
+    background-color: #eee;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    color: #666;
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    font-weight: normal;
+}
+
+// Function
+@for $i from 1 through 5 {
+    $odd: 5 !default;
+    $space: $i * 10px !default;
+    .mt#{$i}0 {
+        margin-top: $space;
+    }
+    .mt#{$i}5 {
+        margin-top: $space + $odd;
+    }
+    .mr#{$i}0 {
+        margin-right: $space;
+    }
+    .mr#{$i}5 {
+        margin-right: $space + $odd;
+    }
+    .mb#{$i}0 {
+        margin-bottom: $space;
+    }
+    .mb#{$i}5 {
+        margin-bottom: $space + $odd;
+    }
+    .ml#{$i}0 {
+        margin-left: $space;
+    }
+    .ml#{$i}5 {
+        margin-left: $space + $odd;
+    }
+}
+
+// icon
+[class^="icon-"],
+[class*=" icon-"] {
+    display: inline-block;
+    background-image: url("../images/icon.png");
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+// shortcut
+.l {
+    float: left;
+}
+
+.r {
+    float: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+
+
+
