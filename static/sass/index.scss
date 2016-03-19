@@ -2,6 +2,14 @@
     box-sizing: border-box;
 }
 
+// font
+.font-orange{
+    color: #ff802e;
+}
+.font-success{
+    color: $success-color;
+}
+
 // btn
 .btn-active{
     background-color: #ff7c70;
@@ -14,6 +22,14 @@
 }
 .btn-disable{
     background-color: #999;
+}
+.btn-block{
+    display: block;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 7px;
+    font-size: 20px;
 }
 
 // icon
@@ -43,11 +59,34 @@
     height: 16px;
     background-image: url("../images/icon-addr.png");
 }
+.icon-traffic{
+    width: 22px;
+    height: 20px;
+    background-image: url("../images/icon-traffic.png");
+}
+.icon-menu{
+    width: 18px;
+    height: 20px;
+    background-image: url("../images/icon-menu.png");
+}
+.active{
+    .icon-traffic{
+        background-image: url("../images/icon-traffic-active.png");
+    }
+    .icon-menu{
+        background-image: url("../images/icon-menu-active.png");
+    }
+}
 
-nav{
+header.bar-nav{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
     display: table;
     table-layout: fixed;
     width: 100%;
+    height: 46px;
     background-color: #f6f7f9;
     a{
         position: relative;
@@ -69,17 +108,83 @@ nav{
             border-bottom: $theme-color solid 2px;
         }
     }
+    &.color-theme{
+        a.active{
+            color: $theme-color;
+        }
+    }
+    &~ .content{
+        padding-top: 46px;
+    }
 }
+footer.bar-nav{
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    display: table;
+    table-layout: fixed;
+    border-top: #bebebe solid 1px;
+    padding: 5px 0;
+    width: 100%;
+    height: 50px;
+    background-color: #fff;
+    a{
+        display: table-cell;
+        line-height: 39px;
+        font-size: 20px;
+        text-align: center;
+        color: #999;
+        i{
+            margin-right: 5px;
+            vertical-align: -3px;
+        }
+        &:first-child{
+            border-right: #e1e1e1 solid 1px;
+        }
+        &.active{
+            color: #4a4a4a;
+        }
+    }
+    &~ .content{
+        margin-bottom: -45px;
+        padding-bottom: 45px;
+    }
+}
+
+.bar-footer{
+    @include clearfix;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    border-top: #bebebe solid 1px;
+    padding: 7px 15px;
+    height: 45px;
+    background-color: #fff;
+    .total{
+        line-height: 30px;
+        font-size: 20px;
+        color: #000;
+        em{
+            font-size: 24px;
+            color: $theme-color;
+        }
+    }
+    &~ .content{
+        margin-bottom: -45px;
+        padding-bottom: 45px;
+    }
+}
+
 .badge{
     display: inline-block;
     width: 10px;
     height: 10px;
     border-radius: 50%;
     background-color: #ff1500;
-}
-.content{
-    margin-bottom: -45px;
-    padding-bottom: 45px;
 }
 .global-list{
     margin-bottom: 10px;
@@ -96,11 +201,9 @@ nav{
             i{
                 margin-right: 7px;
             }
-            .int{
-                color: #ff802e;
-            }
         }
         p{
+            line-height: 30px;
             color: #999;
             .icon-phone{
                 margin: 0 10px 0 2px;
@@ -109,6 +212,9 @@ nav{
             .icon-addr{
                 margin: 0 9px 0 1px;
                 vertical-align: -2px;
+            }
+            .font-orange{
+                font-size: 18px;
             }
         }
         .num{
@@ -126,6 +232,9 @@ nav{
         .btn-message,
         .btn-disable{
             margin-right: 10px;
+        }
+        .font-large{
+            font-size: 18px;
         }
         &:last-child{
             border-bottom: 0;
@@ -200,24 +309,6 @@ nav{
         }
     }
 }
-.bar-footer{
-    @include clearfix;
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 999;
-    border-top: #bebebe solid 1px;
-    padding: 7px 15px;
-    height: 45px;
-    background-color: #fff;
-    .total{
-        line-height: 30px;
-        font-size: 20px;
-        color: #000;
-        em{
-            font-size: 24px;
-            color: $theme-color;
-        }
-    }
+.box{
+    padding: 15px;
 }

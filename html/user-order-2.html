@@ -7,20 +7,22 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="蚂蚁同城">
     <link rel="stylesheet" href="../static/css/main.css"/>
-    <title>员工通道</title>
+    <title>我的订单</title>
 </head>
 <body>
-<header class="bar-nav">
-    <a href="#">未接订单</a>
-    <a href="#" class="active">已接订单</a>
-    <a href="#"><i class="badge"></i>配送订单</a>
+<header class="bar-nav color-theme">
+    <a href="#">未配送</a>
+    <a href="#" class="active">已配送</a>
 </header>
+<footer class="bar-nav">
+    <a href="#"><i class="icon-traffic"></i>蚂蚁配送</a>
+    <a href="#" class="active"><i class="icon-menu"></i>我的订单</a>
+</footer>
 <div class="content">
     <div class="global-list">
         <div class="item">
-            <span class="status-seller r">商家</span>
-            <h3><i class="icon-person"></i>儋州米烂</h3>
-            <p>下单时间：2016-03-14 17:30</p>
+            <h3><i class="icon-person"></i>收货人：陈国滨</h3>
+            <p><em class="font-orange r">x2</em>下单时间：2016-03-14 17:30</p>
         </div>
         <div class="item">
             <p>收货地址：儋州市那大镇中心达到110号</p>
@@ -28,15 +30,13 @@
         </div>
         <div class="item">
             <a href="#" class="btn-default r">查看订单</a>
-            <a href="javascript:;" class="btn-success r">开始配送</a>
-            <span class="num">份数：<em>x2</em></span>
+            <span class="font-large font-success">已配送</span>
         </div>
     </div>
     <div class="global-list">
         <div class="item">
-            <span class="status-person r">个人</span>
-            <h3><i class="icon-person"></i>陈国滨</h3>
-            <p>下单时间：2016-03-14 17:30</p>
+            <h3><i class="icon-person"></i>收货人：陈国滨</h3>
+            <p><em class="font-orange r">x2</em>下单时间：2016-03-14 17:30</p>
         </div>
         <div class="item">
             <p>收货地址：儋州市那大镇中心达到110号</p>
@@ -44,14 +44,9 @@
         </div>
         <div class="item">
             <a href="#" class="btn-default r">查看订单</a>
-            <a href="javascript:;" class="btn-success r">开始配送</a>
-            <span class="num">份数：<em>x2</em></span>
+            <span class="font-large font-success">已配送</span>
         </div>
     </div>
-</div>
-<div class="mas">
-    <i class="icon-success"></i>
-    <p>开始配送</p>
 </div>
 </body>
 </html>
