@@ -1,5 +1,7 @@
 // variable
 $theme-color: #fd9500 !default;
+$inverse-color: #298fdd !default;
+$success-color: #42c700 !default;
 
 // type
 body {
@@ -19,6 +21,10 @@ ul {
 a {
     color: #666;
     text-decoration: none;
+}
+
+em, i{
+    font-style: normal;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -62,7 +68,21 @@ h1, h2, h3, h4, h5, h6, p {
     display: inline-block;
     background-image: url("../images/icon.png");
     background-repeat: no-repeat;
+    background-size: 100%;
     overflow: hidden;
+}
+
+// btn
+[class^="btn-"],
+[class*=" btn-"] {
+    display: inline-block;
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 3px;
+    text-align: center;
+    color: #fff;
+    background-color: $theme-color;
 }
 
 // shortcut

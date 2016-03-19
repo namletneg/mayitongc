@@ -1,6 +1,49 @@
 *{
     box-sizing: border-box;
 }
+
+// btn
+.btn-active{
+    background-color: #ff7c70;
+}
+.btn-success{
+    background-color: $success-color;
+}
+.btn-message{
+    background-color: $inverse-color;
+}
+.btn-disable{
+    background-color: #999;
+}
+
+// icon
+.icon-person{
+    width: 16px;
+    height: 16px;
+    background-image: url("../images/icon-person.png");
+    background-size: 100%;
+}
+.icon-success{
+    width: 30px;
+    height: 30px;
+    background-image: url("../images/icon-success.png");
+}
+.icon-order{
+    width: 16px;
+    height: 19px;
+    background-image: url("../images/icon-order.png");
+}
+.icon-phone{
+    width: 11px;
+    height: 16px;
+    background-image: url("../images/icon-phone.png");
+}
+.icon-addr{
+    width: 13px;
+    height: 16px;
+    background-image: url("../images/icon-addr.png");
+}
+
 nav{
     display: table;
     table-layout: fixed;
@@ -14,8 +57,13 @@ nav{
         border-bottom: #d6d6d6 solid 1px;
         i{
             position: absolute;
-            top: 12px;
-            right: 16px;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(27px, -10px);
+            -moz-transform: translate(27px, -10px);
+            -ms-transform: translate(27px, -10px);
+            -o-transform: translate(27px, -10px);
+            transform: translate(27px, -10px);
         }
         &.active{
             border-bottom: $theme-color solid 2px;
@@ -29,10 +77,147 @@ nav{
     border-radius: 50%;
     background-color: #ff1500;
 }
+.content{
+    margin-bottom: -45px;
+    padding-bottom: 45px;
+}
 .global-list{
     margin-bottom: 10px;
+    padding-left: 15px;
     background-color: #fff;
-    &.item{
+    .item{
+        @include clearfix;
+        padding: 15px 15px 15px 0;
         border-bottom: #eee solid 1px;
+        h3{
+            line-height: 30px;
+            font-size: 20px;
+            color: #000;
+            i{
+                margin-right: 7px;
+            }
+            .int{
+                color: #ff802e;
+            }
+        }
+        p{
+            color: #999;
+            .icon-phone{
+                margin: 0 10px 0 2px;
+                vertical-align: -2px;
+            }
+            .icon-addr{
+                margin: 0 9px 0 1px;
+                vertical-align: -2px;
+            }
+        }
+        .num{
+            font-size: 18px;
+            em{
+                color: $theme-color;
+            }
+        }
+        .large{
+            color: #666;
+        }
+        .btn-default,
+        .btn-active,
+        .btn-success,
+        .btn-message,
+        .btn-disable{
+            margin-right: 10px;
+        }
+        &:last-child{
+            border-bottom: 0;
+        }
+        &.title{
+            margin-left: -15px;
+            border-left: $theme-color solid 5px;
+            padding-left: 10px;
+            h2{
+                font-size: 22px;
+                color: #000;
+            }
+        }
+    }
+}
+.status-seller {
+    display: inline-block;
+    margin-right: -15px;
+    padding: 2px 7px 2px 21px;
+    border-radius: 14px 0 0 14px;
+    color: #fff;
+    background-color: #fd9500;
+}
+.status-person{
+    @extend .status-seller;
+    background-color: $inverse-color;
+}
+.mas{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    padding-top: 17px;
+    width: 100px;
+    height: 100px;
+    border-radius: 7px;
+    font-size: 18px;
+    text-align: center;
+    color: #fff;
+    background-color: rgba(0,0,0,.7);
+}
+.order-status{
+    padding: 7px 15px 7px 40px;
+    color: #fff;
+    background-color: #5e6b85;
+    p{
+        line-height: 30px;
+        i{
+            margin: 0 6px 0 -25px;
+            vertical-align: -4px;
+        }
+        span{
+            font-size: 18px;
+        }
+    }
+}
+.order-info{
+    margin-bottom: 10px;
+    padding: 15px 15px 15px 40px;
+    background-color: #fff;
+    h3{
+        line-height: 30px;
+        font-size: 20px;
+        color: #000;
+        i{
+            margin: 0 9px 0 -25px;
+        }
+    }
+}
+.bar-footer{
+    @include clearfix;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    border-top: #bebebe solid 1px;
+    padding: 7px 15px;
+    height: 45px;
+    background-color: #fff;
+    .total{
+        line-height: 30px;
+        font-size: 20px;
+        color: #000;
+        em{
+            font-size: 24px;
+            color: $theme-color;
+        }
     }
 }
