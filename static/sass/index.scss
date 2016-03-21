@@ -29,7 +29,7 @@
     height: 40px;
     line-height: 40px;
     border-radius: 7px;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 // icon
@@ -68,6 +68,11 @@
     width: 18px;
     height: 20px;
     background-image: url("../images/icon-menu.png");
+}
+.icon-ps{
+    width: 16px;
+    height: 16px;
+    background-image: url("../images/icon-ps.png");
 }
 .active{
     .icon-traffic{
@@ -133,7 +138,7 @@ footer.bar-nav{
     a{
         display: table-cell;
         line-height: 39px;
-        font-size: 20px;
+        font-size: 18px;
         text-align: center;
         color: #999;
         i{
@@ -166,10 +171,10 @@ footer.bar-nav{
     background-color: #fff;
     .total{
         line-height: 30px;
-        font-size: 20px;
+        font-size: 18px;
         color: #000;
         em{
-            font-size: 24px;
+            font-size: 22px;
             color: $theme-color;
         }
     }
@@ -196,7 +201,7 @@ footer.bar-nav{
         border-bottom: #eee solid 1px;
         h3{
             line-height: 30px;
-            font-size: 20px;
+            font-size: 18px;
             color: #000;
             i{
                 margin-right: 7px;
@@ -214,11 +219,11 @@ footer.bar-nav{
                 vertical-align: -2px;
             }
             .font-orange{
-                font-size: 18px;
+                font-size: 16px;
             }
         }
         .num{
-            font-size: 18px;
+            font-size: 16px;
             em{
                 color: $theme-color;
             }
@@ -234,7 +239,7 @@ footer.bar-nav{
             margin-right: 10px;
         }
         .font-large{
-            font-size: 18px;
+            font-size: 16px;
         }
         &:last-child{
             border-bottom: 0;
@@ -244,7 +249,7 @@ footer.bar-nav{
             border-left: $theme-color solid 5px;
             padding-left: 10px;
             h2{
-                font-size: 22px;
+                font-size: 20px;
                 color: #000;
             }
         }
@@ -276,7 +281,7 @@ footer.bar-nav{
     width: 100px;
     height: 100px;
     border-radius: 7px;
-    font-size: 18px;
+    font-size: 16px;
     text-align: center;
     color: #fff;
     background-color: rgba(0,0,0,.7);
@@ -292,7 +297,7 @@ footer.bar-nav{
             vertical-align: -4px;
         }
         span{
-            font-size: 18px;
+            font-size: 16px;
         }
     }
 }
@@ -302,7 +307,7 @@ footer.bar-nav{
     background-color: #fff;
     h3{
         line-height: 30px;
-        font-size: 20px;
+        font-size: 18px;
         color: #000;
         i{
             margin: 0 9px 0 -25px;
@@ -311,4 +316,30 @@ footer.bar-nav{
 }
 .box{
     padding: 15px;
+}
+.banner{
+    width: 100%;
+    img{
+        width: 100%;
+        vertical-align: middle;
+    }
+}
+.form-group{
+    @include clearfix;
+    margin-left: 36px;
+    i{
+        float: left;
+        margin-left: -30px;
+        margin-top: 7px;
+    }
+    .text{
+        border: 0;
+        width: 100%;
+        height: 30px;
+        line-height: 30px;
+        font-size: 16px;
+    }
+    .h60{
+        height: 60px;
+    }
 }
