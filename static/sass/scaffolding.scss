@@ -32,33 +32,37 @@ h1, h2, h3, h4, h5, h6, p {
     font-weight: normal;
 }
 
+input,
+textarea{
+    outline: medium;
+}
+
 // Function
 @for $i from 1 through 5 {
     $odd: 5 !default;
-    $space: $i * 10px !default;
     .mt#{$i}0 {
-        margin-top: $space;
+        margin-top: $i * 10px;
     }
     .mt#{$i}5 {
-        margin-top: $space + $odd;
+        margin-top: $i * 10px + $odd;
     }
     .mr#{$i}0 {
-        margin-right: $space;
+        margin-right: $i * 10px;
     }
     .mr#{$i}5 {
-        margin-right: $space + $odd;
+        margin-right: $i * 10px + $odd;
     }
     .mb#{$i}0 {
-        margin-bottom: $space;
+        margin-bottom: $i * 10px;
     }
     .mb#{$i}5 {
-        margin-bottom: $space + $odd;
+        margin-bottom: $i * 10px + $odd;
     }
     .ml#{$i}0 {
-        margin-left: $space;
+        margin-left: $i * 10px;
     }
     .ml#{$i}5 {
-        margin-left: $space + $odd;
+        margin-left: $i * 10px + $odd;
     }
 }
 
