@@ -78,7 +78,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 td, th { padding: 0; }
 
-body { line-height: 1.5em; font-family: Helvetica,arial,sans-serif; font-size: 14px; color: #666; background-color: #eee; }
+body { line-height: 25px; font-family: Helvetica,arial,sans-serif; font-size: 14px; color: #666; background-color: #eee; }
 
 ul { margin: 0; padding: 0; list-style: none; }
 
@@ -183,6 +183,8 @@ input, textarea { outline: medium; }
 * { box-sizing: border-box; }
 
 .white-bg { background-color: #fff; }
+
+.deep-bg { overflow-x: hidden; background-color: #38373e; }
 
 .font-orange { color: #ff802e; }
 
@@ -300,23 +302,25 @@ footer.bar-nav ~ .content { margin-bottom: -45px; padding-bottom: 45px; }
 .footer-note { position: fixed; left: 0; right: 0; bottom: 0; padding: 0 15px; background-color: #fff; }
 .footer-note p { border-top: #dadada solid 1px; line-height: 54px; color: #999; }
 
-.full-box { position: absolute; top: 0; right: 0; bottom: 0; left: 0; background-color: #38373e; }
+.full-box { padding-bottom: 70px; }
 
 .shortcut-nav { padding: 20px 0 25px; text-align: center; }
 .shortcut-nav a { display: inline-block; border: #fff solid 1px; padding: 5px 15px; font-size: 18px; color: #fff; background-color: #38373e; }
-.shortcut-nav a:first-child { border-radius: 5px 0 0 5px; }
-.shortcut-nav a:last-child { border-radius: 0 5px 5px 0; }
+.shortcut-nav a:first-child { border-radius: 7px 0 0 7px; }
+.shortcut-nav a:last-child { border-radius: 0 7px 7px 0; }
 .shortcut-nav a.active { color: #38373e; background-color: #fff; }
 
-.shortcut-div { position: relative; padding: 0 20px; width: 100%; height: 480px; }
-.shortcut-div .page { position: absolute; left: 20px; right: 20px; top: 0; bottom: 0; text-align: center; }
+.shortcut-div { position: relative; padding: 0 20px; width: 100%; height: 401px; }
+.shortcut-div .page { position: absolute; left: 20px; right: 20px; top: 0; bottom: 0; border-radius: 10px; text-align: center; }
 .shortcut-div .page .wrap { padding-top: 20px; background: url("../images/shortcut_bg.png") repeat-y; background-size: 100%; }
-.shortcut-div .page .title { margin: 0 auto; width: 173px; height: 43px; line-height: 36px; font-size: 20px; background-repeat: no-repeat; background-size: 100%; }
-.shortcut-div .page img { width: 170px; }
-.shortcut-div .page p { font-size: 16px; color: #fff; }
-.shortcut-div .page .bottom { padding: 20px 0; text-align: center; background-color: #fff; }
+.shortcut-div .page .title { margin: 0 auto 10px; width: 173px; height: 43px; line-height: 36px; font-size: 20px; background-repeat: no-repeat; background-size: 100%; }
+.shortcut-div .page img { margin-bottom: 10px; width: 170px; }
+.shortcut-div .page p { line-height: 25px; font-size: 16px; color: #fff; }
+.shortcut-div .page .bottom { margin-top: 10px; padding: 20px 0; border-radius: 0 0 10px 10px; text-align: center; background-color: #fff; }
 .shortcut-div .page .btn-default, .shortcut-div .page .btn-message { width: 170px; height: 40px; line-height: 40px; border-radius: 20px; font-size: 18px; }
 .shortcut-div .seller { background: -moz-linear-gradient(top, #ffe880 0%, #fed30f 100%); /* FF3.6-15 */ background: -webkit-linear-gradient(top, #ffe880 0%, #fed30f 100%); /* Chrome10-25,Safari5.1-6 */ background: linear-gradient(to bottom, #ffe880 0%, #fed30f 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ }
 .shortcut-div .seller .title { color: #fd9500; background-image: url("../images/shortcut-seller-title.png"); }
+.shortcut-div .person { background: -moz-linear-gradient(top, #67bdfe 0%, #1794fb 100%); /* FF3.6-15 */ background: -webkit-linear-gradient(top, #67bdfe 0%, #1794fb 100%); /* Chrome10-25,Safari5.1-6 */ background: linear-gradient(to bottom, #67bdfe 0%, #1794fb 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ }
+.shortcut-div .person .title { color: #fff; background-image: url("../images/shortcut-person-title.png"); }
 
 /*# sourceMappingURL=main.css.map */
