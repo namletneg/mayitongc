@@ -88,6 +88,8 @@ em, i { font-style: normal; }
 
 button { border: 0; }
 
+input, button { -webkit-appearance: none; }
+
 h1, h2, h3, h4, h5, h6, p { margin: 0; font-weight: normal; }
 
 input, textarea { outline: medium; }
@@ -231,8 +233,8 @@ header.bar-nav.color-theme a.active { color: #fd9500; }
 header.bar-nav ~ .content { padding-top: 46px; }
 
 footer.bar-nav { position: fixed; left: 0; right: 0; bottom: 0; z-index: 999; display: table; table-layout: fixed; border-top: #bebebe solid 1px; padding: 5px 0; width: 100%; height: 50px; background-color: #fff; }
-footer.bar-nav a { display: table-cell; line-height: 39px; font-size: 18px; text-align: center; color: #999; }
-footer.bar-nav a i { margin-right: 5px; vertical-align: -3px; }
+footer.bar-nav a { display: table-cell; line-height: 39px; font-size: 14px; text-align: center; color: #999; }
+footer.bar-nav a i { margin-right: 5px; vertical-align: -5px; }
 footer.bar-nav a:first-child { border-right: #e1e1e1 solid 1px; }
 footer.bar-nav a.active { color: #4a4a4a; }
 footer.bar-nav ~ .content { margin-bottom: -45px; padding-bottom: 45px; }
@@ -297,26 +299,26 @@ footer.bar-nav ~ .content { margin-bottom: -45px; padding-bottom: 45px; }
 
 .input-box { position: relative; margin-top: 15px; }
 .input-box i { position: absolute; left: 27px; top: 9px; z-index: 2; }
-.input-box .text { border: #e1e1e1 solid 1px; padding: 0 5px 0 50px; border-radius: 5px; width: 100%; height: 37px; line-height: 35px; font-size: 14px; }
+.input-box .text { border: #e1e1e1 solid 1px; padding: 5px 5px 5px 50px; border-radius: 5px; width: 100%; height: 37px; font-size: 14px; }
 
-.footer-note { position: fixed; left: 0; right: 0; bottom: 0; padding: 0 15px; background-color: #fff; }
+.footer-note { position: absolute; left: 0; right: 0; bottom: 0; padding: 0 15px; background-color: #fff; }
 .footer-note p { border-top: #dadada solid 1px; line-height: 54px; color: #999; }
 
 .full-box { padding-bottom: 70px; }
 
-.shortcut-nav { padding: 20px 0 25px; text-align: center; }
-.shortcut-nav a { display: inline-block; border: #fff solid 1px; padding: 5px 15px; font-size: 18px; color: #fff; background-color: #38373e; }
+.shortcut-nav { padding: 10px 0 15px; text-align: center; }
+.shortcut-nav a { display: inline-block; border: #fff solid 1px; padding: 5px 15px; font-size: 14px; color: #fff; background-color: #38373e; }
 .shortcut-nav a:first-child { border-radius: 7px 0 0 7px; }
 .shortcut-nav a:last-child { border-radius: 0 7px 7px 0; }
 .shortcut-nav a.active { color: #38373e; background-color: #fff; }
 
-.shortcut-div { position: relative; padding: 0 20px; width: 100%; height: 401px; }
+.shortcut-div { position: relative; padding: 0 20px; width: 100%; height: 391px; }
 .shortcut-div .page { position: absolute; left: 20px; right: 20px; top: 0; bottom: 0; border-radius: 10px; text-align: center; }
 .shortcut-div .page .wrap { padding-top: 20px; background: url("../images/shortcut_bg.png") repeat-y; background-size: 100%; }
 .shortcut-div .page .title { margin: 0 auto 10px; width: 173px; height: 43px; line-height: 36px; font-size: 20px; background-repeat: no-repeat; background-size: 100%; }
 .shortcut-div .page img { margin-bottom: 10px; width: 170px; }
 .shortcut-div .page p { line-height: 25px; font-size: 16px; color: #fff; }
-.shortcut-div .page .bottom { margin-top: 10px; padding: 20px 0; border-radius: 0 0 10px 10px; text-align: center; background-color: #fff; }
+.shortcut-div .page .bottom { margin-top: 10px; padding: 15px 0; border-radius: 0 0 10px 10px; text-align: center; background-color: #fff; }
 .shortcut-div .page .btn-default, .shortcut-div .page .btn-message { width: 170px; height: 40px; line-height: 40px; border-radius: 20px; font-size: 18px; }
 .shortcut-div .seller { background: -moz-linear-gradient(top, #ffe880 0%, #fed30f 100%); /* FF3.6-15 */ background: -webkit-linear-gradient(top, #ffe880 0%, #fed30f 100%); /* Chrome10-25,Safari5.1-6 */ background: linear-gradient(to bottom, #ffe880 0%, #fed30f 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ }
 .shortcut-div .seller .title { color: #fd9500; background-image: url("../images/shortcut-seller-title.png"); }
