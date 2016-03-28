@@ -173,7 +173,7 @@
         event.preventDefault();
         mas('接单成功', function () {
             var $div = $($('.bar-nav').find('a')[1]);
-            
+
             if($div.length){
                 if (!$div.find('.badge').length) {
                     $div.append('<i class="badge"></i>');
@@ -215,5 +215,14 @@
                     location.href = self.href;
                 }
             });
-        })
+        }).
+        // 订单确定
+        on('click', '#confirm', function(event){
+            var self = this;
+
+            event.preventDefault();
+            mas('订单生产', function () {
+                location.href = self.href;
+            });
+        });
 })(Zepto);
