@@ -1,5 +1,5 @@
 (function ($) {
-    // Í¼Æ¬»¬¶¯
+    // å›¾ç‰‡æ»‘åŠ¨
     function Slider() {
         this.wrap = document.getElementById('shortcutDiv');
         this.scaleW = window.innerWidth - 40;
@@ -36,25 +36,25 @@
                 handlerUp = function () {
                     var boundary = scale / 3,
                         endTime = new Date(),
-                        distance = endTime.getTime() - self.startTime.getTime();    //Ê±¼ä¼ä¸ô
+                        distance = endTime.getTime() - self.startTime.getTime();    //æ—¶é—´é—´éš”
 
                     if (distance >= 800) {
                         if (self.offsetX > boundary) {
-                            self.go(-1);   //ÍËÒ»Ò³
+                            self.go(-1);   //é€€ä¸€é¡µ
                         } else if (self.offsetX < -boundary) {
-                            self.go(1);    //½øÒ»Ò³
+                            self.go(1);    //è¿›ä¸€é¡µ
                         } else {
-                            self.go(0);   //Í£Áô±¾Ò³
+                            self.go(0);   //åœç•™æœ¬é¡µ
                         }
                     } else {
-                        //ÓÅ»¯£¬
-                        //¿ì²Ù×÷£¬¿¼ÂÇµ½ÓÃ»§¿ìËÙ»¬¶¯£¬»¬¶¯¾àÀë Ğ¡ÓÚ boundary
+                        //ä¼˜åŒ–ï¼Œ
+                        //å¿«æ“ä½œï¼Œè€ƒè™‘åˆ°ç”¨æˆ·å¿«é€Ÿæ»‘åŠ¨ï¼Œæ»‘åŠ¨è·ç¦» å°äº boundary
                         if (self.offsetX > 50) {
-                            self.go(-1);   //ÍËÒ»Ò³
+                            self.go(-1);   //é€€ä¸€é¡µ
                         } else if (self.offsetX < -50) {
-                            self.go(1);    //½øÒ»Ò³
+                            self.go(1);    //è¿›ä¸€é¡µ
                         } else {
-                            self.go(0);   //Í£Áô±¾Ò³
+                            self.go(0);   //åœç•™æœ¬é¡µ
                         }
                     }
                 };
@@ -93,7 +93,7 @@
                 len = item.length,
                 nIdx = self.idx + n;
 
-            //ÅĞ¶Ï nIdx ³¬³ö·¶Î§
+            //åˆ¤æ–­ nIdx è¶…å‡ºèŒƒå›´
             if (nIdx >= len) {
                 nIdx = len - 1;
             } else if (nIdx < 0) {
@@ -126,7 +126,7 @@
         new Slider();
     }
 
-    // ÎÄ±¾¿ò×ÔÊÊÓ¦¸ß¶È
+    // æ–‡æœ¬æ¡†è‡ªé€‚åº”é«˜åº¦
     var autoTextarea = function (elem) {
         var minHeight = $(elem).height(),
             change = function () {
@@ -145,7 +145,75 @@
         elem.addEventListener('focus', change, false);
         change();
     };
-    if($('textarea.text').length){
+    if ($('textarea.text').length) {
         autoTextarea(document.querySelector('textarea.text'), 30)
     }
+
+    // å¼¹å‡ºæ¡†
+    var mas = function (text, callback) {
+        var html = ['<div class="mas">',
+            '<i class="icon-success"></i>',
+            '<p>',
+            text,
+            '</p>',
+            '</div>'].join('');
+
+        $('body').append(html);
+
+        setTimeout(function () {
+            $('.mas').remove();
+            callback && callback();
+        }, 3000);
+    };
+
+    // æ¥å•
+    $('body').on('click', '.jiedan', function (event) {
+        var self = this;
+
+        event.preventDefault();
+        mas('æ¥å•æˆåŠŸ', function () {
+            var $div = $($('.bar-nav').find('a')[1]);
+            
+            if($div.length){
+                if (!$div.find('.badge').length) {
+                    $div.append('<i class="badge"></i>');
+                }
+            } else{
+                // è®¢å•è¯¦æƒ…
+                location.href = self.href;
+            }
+        });
+    }).
+        // é…é€
+        on('click', '.peisong', function (event) {
+            var self = this;
+
+            event.preventDefault();
+            mas('å¼€å§‹é…é€', function () {
+                var $div = $($('.bar-nav').find('a')[2]);
+
+                if($div.length){
+                    if (!$div.find('.badge').length) {
+                        $div.append('<i class="badge"></i>');
+                    }
+                } else{
+                    // è®¢å•è¯¦æƒ…
+                    location.href = self.href;
+                }
+            });
+        }).
+        // å·²é€è¾¾
+        on('click', '.songda', function (event) {
+            var self = this;
+
+            event.preventDefault();
+            mas('é…é€å®Œæ¯•', function () {
+                if($('.bar-nav').length){
+                    $(self).removeClass('songda').addClass('btn-disable').removeClass('btn-message').html('é…é€å®Œæ¯•');
+                } else{
+                    // è®¢å•è¯¦æƒ…
+                    location.href = self.href;
+                }
+            });
+        })
 })(Zepto);
